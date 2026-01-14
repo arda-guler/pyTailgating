@@ -14,7 +14,7 @@ CAR_WIDTH, CAR_HEIGHT = 60, 30
 # "aggressiveness" levels
 PROFILES = {
     "im too young to die": 0.0, # ehe DoOm reFeREncE
-    "new driver": 0.1,
+    "new driver who dis": 0.1,
     "kids onboard": 0.15,
     "elderly": 0.2,
     "cheap junk": 0.3,
@@ -24,7 +24,9 @@ PROFILES = {
     "nurburgring": 0.7,
     "alligator tailgator": 0.8,
     "Bayerische Motoren Werke": 0.9,
-    "rushing crap to the tannery": 1.0 # idiom, don't ask
+    "rushing crap to the tannery": 1.0, # idiom, don't ask
+    "i have no brain and i must drive": 1.1,
+    "for the emperor": 1.4
 }
 
 profile = PROFILES["well ok..."]
@@ -37,7 +39,7 @@ MAX_ACCEL = 100
 MAX_BRAKE = -300
 MAX_JERK = 1000
 
-REACTION_TIME = 0.5
+REACTION_TIME = 0.5 - profile * 0.2
 
 STANDSTILL_DISTANCE = 25
 TIME_HEADWAY = 1.8 - profile
